@@ -15,4 +15,14 @@
   imports = [
     ./modules/hyprland.nix
   ];
+
+  programs.bash.shellAliases = {
+    vim = "nvim";
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Melkorthewise";
+    userEmail = "thomasdemunnik05@gmail.com";
+  };
 }
