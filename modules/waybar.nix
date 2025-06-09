@@ -4,8 +4,8 @@
       layer = "top";
       position = "top";
       modules-left = [ "hyprland/workspaces" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "pulseaudio" "network" "cpu" "memory" ];
+      modules-center = [ "custom/nowplaying" ];
+      modules-right = [ "tray" "network" "bluetooth" "battery" "pulseaudio" "clock" ];
       clock = {
         format = "{:%H:%M}";
         tooltup-format = "{:%A, %d %B %Y}";

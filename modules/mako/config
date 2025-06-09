@@ -1,0 +1,16 @@
+font=JetBrainsMono Nerd Font 12
+
+background-color=#151515
+text-color=#948487
+
+border-color=#D57C39
+border-size=2
+border-radius=8
+
+padding=10
+margin=20
+
+default-timeout=5000
+width=350
+height=150
+

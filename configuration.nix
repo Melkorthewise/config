@@ -42,7 +42,11 @@
     extraGroups = [ "wheel" "networkmanager" ];
   };
   
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    permitRootLogin = "no";
+    passwordAuthentication = false;
+  };
 
   users.users.tdmunnik.openssh.authorizedKeys.keys = [
     #ssh-key

@@ -15,6 +15,7 @@
   imports = [
     ./modules/hyprland.nix
     ./modules/waybar.nix
+    ./modules/nvim.nix
   ];
 
   programs.bash.shellAliases = {
@@ -33,4 +34,17 @@
       push.autoSetupRemote = true;
     };
   };
+
+  programs.ssh = {
+    enable = true;
+
+    extraConfig = ''
+      Host github.com
+        AddKeysToAgent yes
+        IdentityFile ~/.ssh/id_ed25519
+    '';
+  };
+
+  services.ssh-agent.enable = true;
+
 }
