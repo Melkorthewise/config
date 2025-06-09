@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, zenBrowser, ... }: {
   home.username = "tdmunnik";
   home.homeDirectory = "/home/tdmunnik";
   home.stateVersion = "24.11";
@@ -10,6 +10,8 @@
     kitty
     waybar
     dunst
+
+    zenBrowser
   ];
 
   imports = [

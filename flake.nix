@@ -35,15 +35,18 @@
 	        {
 	          home-manager.useGlobalPkgs = true;
 	          home-manager.useUserPackages = true;
-	          home-manager.users.tdmunnik = import ./home.nix;
+	          home-manager.users.tdmunnik = import ./home.nix {
+              inherit pkgs;
+              zenBrowser = zenSpecific;
+            };
 	        }
 
           # === ZEN BROWSER MODULE ===
-          ({ config, pkgs, ... }: {
-            environment.systemPackages = with pkgs; [
-              zenSpecific
-            ];
-          })
+          # ({ config, pkgs, ... }: {
+          #   environment.systemPackages = with pkgs; [
+          #     zenSpecific
+          #   ];
+          # })
 	      ];
       };
     };
